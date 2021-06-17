@@ -1,4 +1,12 @@
 <?php
+
+// adds dynamic tag support
+function custom_wordpress_theme_support_title_tag() {
+    add_theme_support('title-tag');
+}
+
+add_action('after_theme_setup', 'custom_wordpress_theme_support_title_tag');
+
 function custom_wordpress_theme_register_styles()
 {
     // setting our styles version dynamically
